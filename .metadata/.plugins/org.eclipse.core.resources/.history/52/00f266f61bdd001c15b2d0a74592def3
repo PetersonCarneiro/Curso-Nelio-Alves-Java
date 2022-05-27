@@ -1,0 +1,25 @@
+package application;
+
+import java.util.Scanner;
+
+import entities.Rent;
+
+public class Program {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner tc = new Scanner(System.in);
+
+		Rent[]vetor = new Rent[10];
+		
+		System.out.println("Qual o quarto que o estudante escolheu: ");
+		int n =tc.nextInt();
+		
+		for (int i=1; i<=n; i++) {
+			System.out.println();
+			System.out.println("");
+		}
+	}
+
+}
