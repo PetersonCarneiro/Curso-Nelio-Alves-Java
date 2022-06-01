@@ -1,5 +1,6 @@
 package application;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -13,7 +14,7 @@ import entities.enums.OrderStatus;
 
 public class Program {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ParseException {
 		
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
@@ -52,7 +53,7 @@ public class Program {
 
 			OrderItem orderItem = new OrderItem(quantity, productPrice, product); 
 
-			order.addItem(orderItem);
+			order.additem(orderItem);
 		}
 		
 		System.out.println();

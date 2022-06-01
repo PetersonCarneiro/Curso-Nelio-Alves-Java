@@ -51,6 +51,16 @@ public class OrderItem {
 				+ String.format("%.2f", subTotal());
 	}
 
+	public void add(OrderItem item) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void remove(OrderItem item) {
+		// TODO Auto-generated method stub
+		
+	}
+
 
 	
 }
