@@ -24,37 +24,38 @@ public class Program {
 			char type = sc.next().charAt(0);
 			if (type=='i') {
 				System.out.println("Name: ");
+				sc.nextLine();
 				String name = sc.nextLine();
 				System.out.println("Anual income: ");
 				double anuallncome =sc.nextDouble();
 				System.out.println("Health expenditures: ");
 				double healthexpenditures = sc.nextDouble();
-				list.add(new Individual());
+				list.add(new Individual(name, anuallncome, healthexpenditures));
 			}else if (type=='c'){
 				System.out.println("Name: ");
+				sc.nextLine();
 				String name = sc.nextLine();
 				System.out.println("Anual income: ");
 				double anuallncome =sc.nextDouble();
 				System.out.println("Number Employees: ");
-				double numberOfEmployees = sc.nextDouble();
-				list.add(new Campany());
+				int numberOfEmployees = sc.nextInt();
+				list.add(new Campany(name,anuallncome,numberOfEmployees));
 				
 			}
 			
 		}
 		
-		double sum = 0;
+		double sum = 0.0;
 		System.out.println();
 		System.out.println("TAXE PAID: ");
-		
 		for(TaxPayer taxP: list) {
-		double tax = taxP.tax();
-		System.out.println(taxP.getName()+String.format("%.2f",taxP.tax()));
-		sum+= tax;
-		
+			double tax = taxP.tax();
+			System.out.println(taxP.getName()" $ "+String.format("%.2f",tax));
+			sum+= tax;
 		}
+		
 		System.out.println();
-		System.out.println("Total taxes: $ " + String.format("%.2n", sum));
+		System.out.println("Total taxes: $ " + String.format("%.2f", sum));
 		
 		
 		sc.close();
