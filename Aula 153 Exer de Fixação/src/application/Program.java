@@ -50,7 +50,7 @@ public class Program {
 		System.out.println("TAXE PAID: ");
 		for(TaxPayer taxP: list) {
 			double tax = taxP.tax();
-			System.out.println(taxP.getName()" $ "+String.format("%.2f",tax));
+			System.out.println(taxP.getName()+": $"+String.format("%.2f",tax));
 			sum+= tax;
 		}
 		
